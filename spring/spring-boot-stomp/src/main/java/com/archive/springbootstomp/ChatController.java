@@ -21,6 +21,6 @@ public class ChatController {
   public void send2() {
     log.info("ChatController.send2() - send2() called");
 
-    template.convertAndSend("/sub/message", "Hello, WebSocket!");
+    template.convertAndSend("/sub/message", MessageDTO.builder().message("hi").build());
   }
 }
